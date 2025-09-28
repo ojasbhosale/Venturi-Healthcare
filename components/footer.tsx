@@ -144,18 +144,21 @@ export default function Footer() {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Subscribe to our newsletter for updates on our care services, company news, and community stories.
             </p>
-            <div className="flex max-w-md mx-auto">
+
+            {/* Responsive input + button */}
+            <div className="flex flex-col sm:flex-row max-w-md mx-auto gap-3">
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="flex-1 px-2 sm:px-4 py-3 rounded-l-xl bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-venturi-coral focus:border-transparent"
+                className="w-full sm:flex-1 px-4 py-3 rounded-xl sm:rounded-l-xl bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-venturi-coral focus:border-transparent"
               />
-              <button className="bg-venturi-coral hover:bg-venturi-orange px-3 sm:px-6 py-3 rounded-r-xl font-medium transition-all duration-300 hover-lift">
+              <button className="w-full sm:w-auto bg-venturi-coral hover:bg-venturi-orange px-6 py-3 rounded-xl sm:rounded-r-xl font-medium transition-all duration-300 hover-lift">
                 Subscribe
               </button>
             </div>
           </div>
         </div>
+
         
         {/* Bottom Section */}
         <div className="border-t border-white/20 pt-8">

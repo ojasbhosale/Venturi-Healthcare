@@ -139,46 +139,53 @@ export default function Complaints() {
         </div>
 
         {/* Managing Director Contact Section */}
-        <div className="mt-20 animate-fade-in animation-delay-800">
-          <div className="bg-gradient-to-br from-venturi-slate to-venturi-blue rounded-3xl p-8 lg:p-12 text-white shadow-2xl">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
+<div className="mt-20 animate-fade-in animation-delay-800">
+  <div className="bg-gradient-to-br from-venturi-slate to-venturi-blue rounded-3xl p-8 lg:p-12 text-white shadow-2xl">
+    
+    {/* Responsive grid: single column on small screens */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      
+      {/* Text Section */}
+      <div>
+        <h3 className="text-3xl text-white font-bold mb-4">
+          Still need to talk?
+        </h3>
+        <p className="text-xl mb-6 opacity-90">
+          If you&apos;re still unhappy with our reply or just want to have a confidential chat, 
+          you&apos;re more than welcome to contact our Managing Director directly.
+        </p>
+        <p className="text-lg opacity-75">
+          We believe in complete transparency and are committed to resolving any concerns 
+          at the highest level.
+        </p>
+      </div>
+      
+      {/* Contact Card */}
+      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 w-full max-w-md mx-auto lg:mx-0">
+        <h4 className="text-xl font-bold mb-4 text-venturi-coral">
+          Managing Director Contact
+        </h4>
+        <div className="space-y-3">
+          {contactInfo.map((info, index) => (
+            <div key={index} className="flex items-center space-x-3">
+              <info.icon className="h-5 w-5 text-venturi-coral flex-shrink-0" />
               <div>
-                <h3 className="text-3xl text-white font-bold mb-4">
-                  Still need to talk?
-                </h3>
-                <p className="text-xl mb-6 opacity-90">
-                  If you&apos;re still unhappy with our reply or just want to have a confidential chat, 
-                  you&apos;re more than welcome to contact our Managing Director directly.
-                </p>
-                <p className="text-lg opacity-75">
-                  We believe in complete transparency and are committed to resolving any concerns 
-                  at the highest level.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <h4 className="text-xl font-bold mb-4 text-venturi-coral">
-                  Managing Director Contact
-                </h4>
-                <div className="space-y-3">
-                  {contactInfo.map((info, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <info.icon className="h-5 w-5 text-venturi-coral flex-shrink-0" />
-                      <div>
-                        <p className="text-sm opacity-75">{info.label}</p>
-                        <p className="font-medium">{info.value}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="mt-6 w-full bg-venturi-coral hover:bg-venturi-orange text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 hover-lift">
-                  Contact Managing Director
-                </button>
+                <p className="text-sm opacity-75">{info.label}</p>
+                <p className="font-extralight sm:font-medium">{info.value}</p>
               </div>
             </div>
-          </div>
+          ))}
         </div>
+        
+        <button className="mt-6 w-full bg-venturi-coral hover:bg-venturi-orange text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 hover-lift">
+          Contact Managing Director
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
         {/* Bottom Assurance */}
         <div className="text-center mt-16 animate-fade-in animation-delay-1000">
